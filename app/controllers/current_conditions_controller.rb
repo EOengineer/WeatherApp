@@ -1,0 +1,3 @@
+class CurrentConditionsController < ApplicationController
+
+end
