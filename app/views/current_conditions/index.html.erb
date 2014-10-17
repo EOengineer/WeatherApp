@@ -1,6 +1,6 @@
-<h1>Current Conditions Here</h1>
 
-<%= simple_form_for :current_condition, method: :get do |f| %>
-  <%= f.input :zip_code, label: 'zip code' %>
-  <%= f.submit 'Submit' %>
-<% end %>
+
+<%= render 'zip_code' %>
+
+<p>Current Conditions in <%= @current_conditions.city_state %></p>
+<p>Last Updated at <%= @current_conditions.last_updated%></p>

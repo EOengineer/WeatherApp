@@ -17,10 +17,10 @@ feature "get current weather conditions", %q{
 
   scenario 'visitor specifies valid location' do
     visit current_conditions_path
-    fill_in 'zip code', with: '02135'
+    fill_in 'Zip code', with: '02135'
     click_button 'Submit'
     expect(current_path).to eq(current_conditions_path)
-    expect(page).to have_content("The Weather in Brighton, MA is:")
+    expect(page).to have_content("Current Conditions in Brighton, MA")
   end
 end
 
