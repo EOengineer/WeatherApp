@@ -1,7 +1,8 @@
 class CurrentCondition
+  attr_reader :zip_code
 
   def initialize(zip_code = "34102")
-    @zip_code ||= zip_code
+    @zip_code = zip_code
   end
 
   def city_state
@@ -81,7 +82,7 @@ class CurrentCondition
   end
 
 
-  protected
+  private
   def w_api
     w_api ||= Wunderground.new(ENV["WUG_CREDS"])
   end

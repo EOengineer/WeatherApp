@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="zip-form text-center" style="margin: 0 auto;width: 200px;">
+    <%= simple_form_for :current_condition, method: :get do |f| %>
+      <%= f.input :zip_code, required: true %>
+      <%= f.button :submit, 'Get Weather', class: 'large' %>
+    <% end %>
+  </div>
+</div>
